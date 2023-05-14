@@ -7,7 +7,8 @@ import {
     Typography,
 } from "@mui/material"
 import React from "react"
-// import { signin } from "./service/ApiService"
+
+import axios from "axios"
 import Modal from "react-modal"
 import CloseIcon from "@mui/icons-material/Close"
 
@@ -31,6 +32,34 @@ const LoginModal = ({ isOpen, onClose }) => {
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log("Login Button!!")
+
+        const data = new FormData(event.target)
+
+        const email = data.get("email")
+        const password = data.get("password")
+
+        axios
+            .post("http://localhost:7777/auth/signin", {
+                email: email,
+                password: password,
+            })
+            .then((response) => {
+                // console.log(response.data)
+                // console.log(response.data.name)
+                onClose()
+                localStorage.setItem("ACCESS_TOKEN", response.data.token)
+                localStorage.setItem("USER_NAME", response.data.name)
+                localStorage.setItem("USER_EMAIL", response.data.email)
+                localStorage.setItem("ID", response.data.id)
+                window.location.href = "/"
+            })
+            .catch((error) => {
+                console.error(error)
+                alert("Wrong ID or Password")
+
+                return
+            })
+        // signin({ email: email, password: password })
     }
 
     return (

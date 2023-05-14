@@ -1,0 +1,166 @@
+p {
+    margin: 0;
+}
+
+li {
+    padding: 0;
+    margin: 0;
+}
+
+.badgeWrapper {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.studyItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 25px 0px 25px;
+    width: 300px;
+    height: 250px;
+    background: #ffffff;
+    border: 2px solid #d1d1d1;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.studyItem:hover {
+    transform: scale(1.02);
+}
+
+.schedule {
+    display: flex;
+    font-size: 14px;
+    gap: 8px;
+    color: #999999;
+    font-weight: 500;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.scheduleTitle {
+    letter-spacing: -4%;
+}
+
+.title {
+    font-size: 30px;
+    min-height: 50px;
+    line-height: 28px;
+
+    letter-spacing: -0.05em;
+    margin: 7px 0 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.positionList {
+    height: 22px;
+    display: flex;
+    list-style: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    gap: 7px;
+    padding: 0;
+}
+
+.position {
+    padding: 3px 10px;
+    gap: 5px;
+    height: 22px;
+    background: #f2f4f8;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #3e86f5;
+}
+
+.content {
+    margin-bottom: 24px;
+    padding: 0;
+    display: flex;
+    gap: 13px;
+    list-style: none;
+}
+
+.language {
+    width: 32px;
+    height: 32px;
+}
+
+.languageImage {
+    width: 32px;
+    height: 32px;
+}
+
+.border {
+    border-top: 2px solid #f2f2f2;
+}
+
+.info {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: flex-end;
+    letter-spacing: -0.04em;
+    margin-top: 8px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.viewsAndComment {
+    display: flex;
+    gap: 10px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    color: #999999;
+    gap: 5px;
+}
+
+.closed {
+    opacity: 0.4;
+}
+
+.open {
+    opacity: 1;
+}
+
+.closeNotice {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 16px;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+}
+
+.bookmark {
+    display: block;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .studyItem {
+        width: 100%;
+    }
+}

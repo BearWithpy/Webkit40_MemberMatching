@@ -1,0 +1,119 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    max-width: 1300px;
+    min-height: 60rem;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.box {
+    width: 85%;
+    /* height: 200px; */
+    margin: 20px;
+    background-color: blue;
+}
+
+.category {
+    display: flex;
+}
+
+.category__item {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.active {
+    color: #444444;
+}
+
+.inactive {
+    color: rgb(134, 142, 150);
+}
+
+.text {
+    margin-left: 0.5rem;
+}
+
+.selectboxInput {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.selectboxInput + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.categoryWrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: 800;
+}
+
+.appWrapper {
+    margin: 0 auto;
+    width: 1150px;
+}
+
+@media screen and (max-width: 1300px) {
+    .appWrapper {
+        width: 960px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .appWrapper {
+        width: 630px;
+    }
+
+    .categoryWrapper {
+        flex-direction: column;
+        gap: 28px;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .appWrapper {
+        width: 100%;
+    }
+    .main {
+        margin-top: 60px;
+        padding: 0 16px;
+    }
+    .text {
+        margin-left: 6px;
+        font-size: 20px;
+    }
+
+    .categoryWrapper {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
